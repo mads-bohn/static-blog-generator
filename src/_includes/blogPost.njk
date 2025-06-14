@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="./blog.css">
+    <title>mewizard</title>
+</head>
+
+<body>
+    <div class="grid">
+        <header>
+            <h1><a href="index.html" class="title">mewizard</a></h1>
+        </header>
+
+        <div class="sidebar">
+            <nav>
+                <ul>
+                    <li class="navlink"><a href="/index.html">home</a></li>
+                    <li class="navlink"><a href="/about.html">about</a></li>
+                    <li class="navlink navlink--current"><a href="/blog.html">blog</a></li>
+                    <li class="navlink"><a href="/currently.html">currently</a></li>
+                    <li class="navlink"><a href="/guestbook.html">guestbook</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="content">
+            <div class="section">   
+                <div class="post">
+                    <time datetime="2025-06-13 21:14">06-13-25</time>
+                    <h3>{{ title }}</h3>
+                    <hr>
+                    <div class="post__content">
+                        {{ content | safe }}
+                    </div>
+                </div>
+            </div>     
+            <a href="../blog.html"><img src="../assets/icons/arrow-left.png" class="icon" alt="Back arrow">back</a>  
+        </div>
+    </div>
+  
+</body>
+</html>
