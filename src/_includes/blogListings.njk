@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css{{ nocache }}">
+    <link rel="stylesheet" href="./blog.css{{ nocache }}">
+    <title>Blog</title>
+</head>
+
+<body>
+    <div class="grid">
+        {% include "partials/header.html" %}
+        {% include "partials/sidebar.html" %}
+
+        
+        <div class="content">
+            <div class="section">
+                <h3>Posts</h3> 
+                <ul>
+                    {% for item in collections.post %}
+                        <li class="post-listing">
+                            <a href="{{ item.page.url }}"> {{ item.data.title }} </a>
+                            <time datetime="{{ item.data.date }}" class="post-listing__time"> {{ item.data.timestamp }} </time>
+                        </li>
+                    {% endfor %}
+                </ul>  
+                
+            </div>     
+            <a href="./home.html"><img src="../assets/icons/arrow-left.png" class="icon" alt="Back arrow">back</a>  
+        </div>
+    </div>
+  
+</body>
+</html>
