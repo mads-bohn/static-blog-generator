@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="../main.css{{ nocache }}">
     <link rel="stylesheet" href="./blog.css{{ nocache }}">
     <link rel="icon" type="image/x-icon" href="./assets/icons/favicon.ico">
-    <title>Blog</title>
+    <title>mewizard</title>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
             <div class="section">
                 <h3>Posts</h3> 
                 <ul>
-                    {% for item in collections.post %}
+                    {% for item in collections.post | reverse %}
                         <li class="post-listing">
                             <a href="{{ item.page.url }}"> {{ item.data.title }} </a>
                             <time datetime="{{ item.data.date }}" class="post-listing__time"> {{ item.data.timestamp }} </time>
