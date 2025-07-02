@@ -2,10 +2,17 @@
     <nav>
         <ul>
             <a href="/index.html" class="navlink"><li class="navtext navtext--first">home</li></a>
-            <a href="/about.html" class="navlink"><li class="navtext">about</li></a>
+            
+            <a class="navlink dropdown__btn"><li class="navtext">about</li></a>
+            <div class="dropdown__menu">
+                <a href="/about/me.html" class="navlink"><li class="navtext">me</li></a>
+                <a href="/about/site.html" class="navlink"><li class="navtext">the site</li></a>
+            </div>
+
             <a href="/blog.html" class="navlink"><li class="navtext navtext--current">blog</li></a>
             <a href="/links.html" class="navlink"><li class="navtext">links</li></a>
             <a href="/guestbook.html" class="navlink"><li class="navtext">guestbook</li></a>
         </ul>
+        <script src="/scripts/toggleDropdown.js"></script>
     </nav>
 </div>
