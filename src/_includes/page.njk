@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css{{ nocache }}">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <div class="grid">
+        {% include "partials/header.html" %}
+        {% include "partials/sidebar.njk" %}
+       
+        <div class="content"> 
+            {{ content | safe }}
+        </div>
+  
+</body>
+</html>
