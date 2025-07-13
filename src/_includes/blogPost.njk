@@ -1,34 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../main.css{{ nocache }}">
-    <link rel="stylesheet" href="./blog.css{{ nocache }}">
-    <link rel="icon" type="image/x-icon" href="../assets/icons/favicon.ico">
-    <title>{{ title }}</title>
-</head>
+---
+layout: page.njk
+---     
 
-<body>
-    <div class="grid">
-        {% include "partials/header.html" %}
-        {% include "partials/sidebar.njk" %}
-
-        
-        <div class="content">
-            <div class="section">   
-                <div class="post">
-                    <time>{{ timestamp }}</time>
-                    <h2>{{ title }}</h2>
-                    <hr>
-                    <div class="post__content">
-                        {{ content | safe }}
-                    </div>
-                </div>
-            </div>     
-            <a href="../blog.html"><img src="../assets/icons/arrow-left.png" class="icon" alt="Back arrow">back</a>  
+<div class="section">   
+    <div class="post">
+        <time>{{ timestamp }}</time>
+        <h2>{{ title }}</h2>
+        <hr>
+        <div class="post__content">
+            {{ content | safe }}
         </div>
     </div>
-  
-</body>
-</html>
+</div>     
+<a href="../blog.html"><img src="../assets/icons/arrow-left.png" class="icon" alt="Back arrow">back</a>  
